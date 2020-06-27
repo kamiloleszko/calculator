@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 public class Calculator {
 
     private static final Logger LOGGER = Logger.getLogger( Calculator.class.getName() );
+    private static final String RESULT = "Wynik: ";
 
     public void calculate(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
@@ -49,7 +50,7 @@ public class Calculator {
       } catch (IOException | EnumNotFindException ex ) {
           LOGGER.log(Level.WARNING, ex.getMessage());
       }
-      LOGGER.log(Level.INFO, finalValue.toString());
+      LOGGER.log(Level.INFO, RESULT + finalValue.toString());
     }
 
 
